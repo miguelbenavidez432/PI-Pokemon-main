@@ -1,0 +1,12 @@
+.div{ 
+    box-shadow: 0 0 3rem -1rem;
+    border-radius: 1rem;
+    background-color: #ececec;    
+    text-align: center;
+}
+
+.img {
+    max-width: 425px;
+    width: 25%;
+    margin-top: 4px;
+}

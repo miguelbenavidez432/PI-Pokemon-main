@@ -1,0 +1,14 @@
+.container{
+    color: black;
+    text-transform: capitalize;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+}
+
+
+
+.card{
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    margin: 5rem, 1rem, 1rem, 1rem;
+    text-decoration: none;    
+}
+

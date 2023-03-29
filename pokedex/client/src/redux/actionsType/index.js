@@ -1,0 +1,10 @@
+export const GET_ALL_POKEMONS = 'GET_ALL_POKEMONS';
+export const GET_POKEMON_BY_ID = 'GET_POKEMON_BY_ID';
+export const GET_POKEMON_BY_NAME = 'GET_POKEMON_BY_NAME';
+export const GET_ALL_TYPES = 'GET_ALL_TYPES';
+export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
+export const EMPTY_FILTER = 'EMPTY_FILTER';
+export const FILTER_CREATED = 'FILTER_CREATED';
+export const FILTER_API = 'FILTER_API';
+export const ORDER_BY_ATK = 'ORDER_BY_ATK';
+export const ORDER_BY_NAME = 'ORDER_BY_NAME';

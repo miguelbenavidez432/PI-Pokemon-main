@@ -1,0 +1,17 @@
+.containers{
+    color: white;
+    background-color: rgba(10, 10, 10, 0.705);
+    text-align: center;
+    
+}
+
+.button{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.red{
+    color: rgb(243, 144, 144);
+    font-size: 1rem;
+}
+
