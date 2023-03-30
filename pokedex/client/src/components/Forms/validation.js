@@ -14,6 +14,9 @@ const validation = (input) => {
     if(input.speed.length > 2){
         errors.speed = "Speed cannot be greater than 99"
     }
+    if(input.defense.length > 2){
+        errors.defense = "Defense cannot be greater than 99"
+    }
     if(input.weight.length > 2){
         errors.weight = "Weight cannot be greater than 99"
     }

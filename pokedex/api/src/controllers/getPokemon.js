@@ -2,27 +2,29 @@ const axios = require ('axios');
 const { Pokemon, Type } = require ('../db')
 
 const getAllPokemons = async () => {
-    let pokemons = [];        
-          
-        const apiData = await axios(`https://pokeapi.co/api/v2/pokemon?limit=50`)
-        .then(response => response.data.results);
-        const promises = apiData.map( async pokemon => {
-            return await axios(pokemon.url)
-            })
-            await Promise.all(promises)
+    let i = 1
+    let pokemons = [];   
+    let apiData = [];    
+    
+    while(i < 152){
+        let res = await axios(`https://pokeapi.co/api/v2/pokemon/${i}`)
+        apiData.push(res.data)
+        i++
+    }    
+            await Promise.all(apiData)
             .then( pokemonData => {
                 pokemons = pokemonData.map((poks) => {
                     return {
-                        id: poks.data.id,
-                        name: poks.data.name,
-                        image: poks.data.sprites.front_default,
-                        hp: poks.data.stats[0].base_stat,
-                        attack: poks.data.stats[1].base_stat,
-                        defense: poks.data.stats[2].base_stat,
-                        speed: poks.data.stats[5].base_stat,
-                        height: poks.data.height,
-                        weight: poks.data.weight,
-                        types: poks.data.types.map( t =>{
+                        id: poks.id,
+                        name: poks.name,
+                        image: poks.sprites.front_default,
+                        hp: poks.stats[0].base_stat,
+                        attack: poks.stats[1].base_stat,
+                        defense: poks.stats[2].base_stat,
+                        speed: poks.stats[5].base_stat,
+                        height: poks.height,
+                        weight: poks.weight,
+                        types: poks.types.map( t =>{
                             return {
                                 name: t.type.name,
                             };
@@ -42,7 +44,6 @@ const getAllPokemons = async () => {
           return [...pokemons, ...dbData];
        
 }
-
     
 const getPokemonByName = async (name) => {
     nameLower = name.toLowerCase();

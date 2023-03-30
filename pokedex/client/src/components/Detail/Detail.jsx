@@ -29,7 +29,7 @@ const Detail = () =>{
             <br />
             <br />
             <img className={style.pokemon_image} src={pokeDetail.image} alt={pokeDetail.name} />
-            <h1 className={style.pokemon_data} ><span>{pokeDetail.id && pokeDetail.id.length < 3 } </span> -
+            <h1 className={style.pokemon_data} ><span>{isNaN(pokeDetail.id) ? '' : pokeDetail.id } </span> -
             <span className={style.pokemon_name} > {pokeDetail?.name}</span>
             <br />
             <br />

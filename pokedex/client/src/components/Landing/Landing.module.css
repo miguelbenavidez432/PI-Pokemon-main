@@ -1,4 +1,4 @@
-.container{
+.container {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -10,16 +10,22 @@
   background-size: 100%;
 }
 
-.container h1{
+.container h1 {
   color: #070977;
-  margin-top: 5rem;
-  text-shadow:
-          /* White glow */ 0 0 7px #d2d2dd, 0 0 10px #d34604;
+  margin-top: 5rem
 }
 
-.container button{
-    color: #070977;
-    margin-top: 5rem;
-    text-shadow:
-            /* White glow */ 0 0 7px #d2d2dd, 0 0 10px #d34604;
-  }
+.container button {
+  color: #070977;
+  margin-top: 5rem;
+}
+
+.img {
+  cursor: pointer;
+  box-shadow: 0 0 1rem grey;
+}
+
+.img:hover {
+  transform: scale(1.5);
+  transition: 0.7s;
+}

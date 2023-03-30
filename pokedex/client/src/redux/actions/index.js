@@ -51,12 +51,8 @@ export const emptyFilter = () => {
     return { type: EMPTY_FILTER  };
 }
 
-export const filterCreated = () => {
-    return { type: FILTER_CREATED }
-}
-
-export const filterApi = () => {
-    return { type: FILTER_API }
+export const filterCreated = (payload) => {
+    return { type: FILTER_CREATED, payload }
 }
 
 export const orderBayName = (ORDER) => {

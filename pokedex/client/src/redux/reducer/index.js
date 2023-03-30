@@ -3,9 +3,7 @@ import { GET_ALL_POKEMONS,
     GET_POKEMON_BY_ID, 
     GET_ALL_TYPES,
     FILTER_BY_TYPE,
-    EMPTY_FILTER,
     FILTER_CREATED,
-    FILTER_API,
     ORDER_BY_ATK,
     ORDER_BY_NAME,
 } from '../actionsType';
@@ -49,19 +47,13 @@ const reducer = (state = inicialState, action) => {
                     p?.types[1]?.name === action.payload
                 )
             };
-        case EMPTY_FILTER:
-            return {
-                ...state,
-                pokemons: [],
-            };
         case FILTER_CREATED:
-
-            return{
+           const allpoke = state.allpokemons
+           const createdFilter = action.payload === 'create' ? allpoke.filter((p) => p.create) : allpoke.filter ((p) => !p.create)
+           return{
                 ...state,
-                pokemons: state.allpokemons.filter(
-                    poke => poke.create === true
-                )
-            }
+                pokemons: action.payload === 'all' ? allpoke : createdFilter
+           }
         case ORDER_BY_NAME:
             let sortName = action.payload === 'asc' ?
                 state.pokemons.sort(function (a, b) {
@@ -85,6 +77,30 @@ const reducer = (state = inicialState, action) => {
             return{
                 ...state,
                 pokemons: sortName
+            }
+            case ORDER_BY_ATK:
+            let sortAtt = action.payload === 'min' ?
+                state.pokemons.sort(function (a, b) {
+                    if (a.attack > b.attack) {
+                        return 1
+                    }
+                    if (b.attack > a.attack) {
+                        return -1
+                    }
+                    return 0
+                }) :
+                state.pokemons.sort(function (a, b) {
+                    if (a.attack > b.attack) {
+                        return -1
+                    }
+                    if (b.attack > a.attack) {
+                        return 1
+                    }
+                    return 0
+                })
+            return{
+                ...state,
+                pokemons: sortAtt
             }
         default:
             return state;

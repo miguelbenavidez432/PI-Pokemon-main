@@ -3,4 +3,19 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    text-decoration: none;
+    background-color: #6ab7f5;
+    font-size: 40px;
+    color: black;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.link:hover{
+  transform: scale(1.2);
+  transition: 0.7s;
 }

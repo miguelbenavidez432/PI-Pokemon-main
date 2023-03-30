@@ -1,4 +1,4 @@
-.container{
+.container {
     color: black;
     text-transform: capitalize;
     background: linear-gradient(to bottom, #6ab7f5, #fff);
@@ -6,9 +6,26 @@
 
 
 
-.card{
+.card {
     background: linear-gradient(to bottom, #6ab7f5, #fff);
     margin: 5rem, 1rem, 1rem, 1rem;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
+.option {
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.5em 1em;
+    border: 1px solid blue;
+    border-left: none;
+    border-radius: 10000vmax;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgb(0, 0, 0, .25);
+    transition: 0.2s;
+    margin-left: 1rem;
+    align-items: center;
+}

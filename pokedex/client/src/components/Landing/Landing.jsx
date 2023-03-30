@@ -7,7 +7,7 @@ const Landing = () => {
         <>
         <div className={style.container} >
             <h1>LANDING PAGE DE POKEMON</h1>
-            <Link to='/home'><img src={image} alt="" /></Link>            
+            <Link to='/home'><img className={style.img} src={image} alt="" /></Link>            
         </div>        
         </>
     )

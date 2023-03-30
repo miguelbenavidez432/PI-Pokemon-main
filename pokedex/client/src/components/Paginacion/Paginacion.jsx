@@ -1,4 +1,3 @@
-import { useSelector} from 'react-redux';
 import style from '../Paginacion/Paginacion.module.css'
 
  const Paginacion = ({ pokePerPage, page, pokemons }) => {
@@ -13,7 +12,11 @@ import style from '../Paginacion/Paginacion.module.css'
         <ul className={style.container}>
           {pagNumbers &&
             pagNumbers.map((number) => (
-                <button className={style.button} onClick={() => page(number)}>   {number}   </button>
+                <button 
+                key={number}
+                className={style.button}
+                onClick={() => page(number)}>
+                     {number}   </button>
             ))}
         </ul>
       </div>
