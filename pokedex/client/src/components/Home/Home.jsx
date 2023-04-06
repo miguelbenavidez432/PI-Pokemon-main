@@ -45,7 +45,7 @@ const Home = () => {
 
     return (
         <div className={style.container}>
-            <h1>Esto es el Home</h1>
+            <h1 className={style.h1}>Welcome to Pokedex</h1>
             <SearchBar ></SearchBar>
             <select
                 onChange={(e) => handlerSortName(e)}

@@ -1,8 +1,11 @@
-.containers{
+.div{
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+}
+
+.container{
     color: white;
     background-color: rgba(10, 10, 10, 0.705);
     text-align: center;
-    
 }
 
 .button{

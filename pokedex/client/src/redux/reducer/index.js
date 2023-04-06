@@ -29,7 +29,7 @@ const reducer = (state = inicialState, action) => {
                 ...state,
                 pokemonDetail: action.payload
             }
-        case GET_POKEMON_BY_NAME:
+        case GET_POKEMON_BY_NAME:            
             return{
                 ...state, 
                 pokemons: [action.payload]

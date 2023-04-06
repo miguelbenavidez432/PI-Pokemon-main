@@ -4,8 +4,6 @@
     background: linear-gradient(to bottom, #6ab7f5, #fff);
 }
 
-
-
 .card {
     background: linear-gradient(to bottom, #6ab7f5, #fff);
     margin: 5rem, 1rem, 1rem, 1rem;
@@ -28,4 +26,8 @@
     transition: 0.2s;
     margin-left: 1rem;
     align-items: center;
+}
+
+h1{
+    margin-left: 2rem;
 }

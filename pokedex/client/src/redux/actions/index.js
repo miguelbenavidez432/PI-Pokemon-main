@@ -13,7 +13,7 @@ import axios from 'axios';
 
 export const getAllPokemons = () => {
     return async function (dispatch) {
-        const backData = await axios(`http://localhost:3001/pokemons`);
+        const backData = await axios(`https://backend-pokedex-production.up.railway.app/pokemons`);
         const pokemonsData = backData.data;
         dispatch({ type: GET_ALL_POKEMONS, payload: pokemonsData });       
     }
@@ -21,7 +21,7 @@ export const getAllPokemons = () => {
 
 export const getPokemonById = (id) => {
     return async function (dispatch) {
-        const backData = await axios(`http://localhost:3001/pokemons/${id}`);
+        const backData = await axios(`https://backend-pokedex-production.up.railway.app/pokemons/${id}`);
         const pokemonsData = backData.data;
         dispatch({ type: GET_POKEMON_BY_ID, payload: pokemonsData });       
     }
@@ -29,15 +29,17 @@ export const getPokemonById = (id) => {
 
 export const getPokemonByName = (name) => {
     return async function (dispatch) {
-        const backData = await axios(`http://localhost:3001/pokemons/${name}`);
+        const backData = await axios(`https://backend-pokedex-production.up.railway.app/pokemons/${name}`);
         const pokemonsData = backData.data;
+        console.log(pokemonsData)
         dispatch({ type: GET_POKEMON_BY_NAME, payload: pokemonsData });       
     }
 }
 
+
 export const getAllTypes = () =>{
     return async function (dispatch) {
-        const backData = await axios(`http://localhost:3001/types`);
+        const backData = await axios(`https://backend-pokedex-production.up.railway.app/types`);
         const typeData = backData.data;
         dispatch({ type: GET_ALL_TYPES, payload: typeData })
     }

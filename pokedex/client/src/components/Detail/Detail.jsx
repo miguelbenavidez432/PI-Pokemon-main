@@ -22,10 +22,7 @@ const Detail = () =>{
 
     return(
         <div className={style.container}>
-            <h2>Detail</h2>
-            <br />
-            <button className={style.button} onClick={backToHome}> HOME
-            </button>
+            <h2></h2>
             <br />
             <br />
             <img className={style.pokemon_image} src={pokeDetail.image} alt={pokeDetail.name} />

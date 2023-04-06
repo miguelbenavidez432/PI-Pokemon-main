@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import style from '../Card/Card.module.css'
+
 const Card = (props) =>{
     return(
         <div className={style.div}>
