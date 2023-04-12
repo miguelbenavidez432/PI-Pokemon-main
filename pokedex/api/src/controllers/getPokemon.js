@@ -6,7 +6,7 @@ const getAllPokemons = async () => {
     let pokemons = [];   
     let apiData = [];    
     
-    while(i < 152){
+    while(i < 52){
         let res = await axios(`https://pokeapi.co/api/v2/pokemon/${i}`)
         apiData.push(res.data)
         i++
@@ -135,6 +135,7 @@ const getPokemonById = async (id) => {
 
 
 const createPokemon = async (name, hp, attack, defense, speed, height, weight, type) => {
+
 
     let newPokemon = await Pokemon.create({
     name: name.toLowerCase(),
