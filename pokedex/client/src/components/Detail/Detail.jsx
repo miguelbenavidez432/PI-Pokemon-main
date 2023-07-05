@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import style from './Detail.module.css';
@@ -22,7 +24,6 @@ const Detail = () =>{
 
     return(
         <div className={style.container}>
-            <h2></h2>
             <br />
             <br />
             <img className={style.pokemon_image} src={pokeDetail.image} alt={pokeDetail.name} />

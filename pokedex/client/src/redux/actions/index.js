@@ -36,7 +36,6 @@ export const getPokemonByName = (name) => {
     }
 }
 
-
 export const getAllTypes = () =>{
     return async function (dispatch) {
         const backData = await axios(`https://backend-pokedex-production.up.railway.app/types`);
